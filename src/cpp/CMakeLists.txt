@@ -3,4 +3,4 @@ project(open_mp_examples)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(open_mp_examples main.cpp)
+add_executable(open_mp_examples ArrayLib.cpp FunctionTimer.cpp)
