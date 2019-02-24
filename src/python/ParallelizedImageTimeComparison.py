@@ -28,7 +28,7 @@ def main():
     # set up list of lists of arguments for the reduceColor function
     imageData=readPPM("images/dog.ppm")
     argsIn=[]
-    for x in range(1,4):
+    for x in range(1,16):
         factor = 2**x
         temp = imageData, factor, []
         argsIn.append(temp)
@@ -43,7 +43,7 @@ def main():
     print("Reduce color single thread: "+str(finish-start)+" seconds")
 
     #multi thread
-    pool = Pool(3)
+    pool = Pool()
     start = time()
     pool.map(reduceColor, parallelArgsIn)
     finish = time()
